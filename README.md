@@ -1,3 +1,3 @@
-# BernMP GitHub
+# Jornada Trybe
 
-### [Bernardo Marques](https://www.linkedin.com/in/bernardo-marquesp/)
+### Deixo aqui o registro de todo meu aprendizado durante a escola Trybe.
