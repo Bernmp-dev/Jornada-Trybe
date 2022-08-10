@@ -1,0 +1,14 @@
+1. mkdir unix_tests
+cd unix_tests
+
+2. 
+touch trybe.txt
+
+3.
+cp trybe.txt trybe_backup.txt
+
+4.
+mv trybe.txt trybe_novo.txt
+
+5.
+mkdir backup
