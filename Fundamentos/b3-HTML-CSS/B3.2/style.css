@@ -1,0 +1,44 @@
+       
+        body{
+            font-family: monospace;
+            font-style: normal;
+            font-size: 16px;
+            text-decoration: overline underline wavy;
+            
+        }
+        h1 {
+            font-family: sans-serif;
+            font-size: 65px;
+            color: rgba(255, 125, 50, 0.877);
+
+        }
+
+        ul {
+            font-style: italic;
+            line-height: 50px;
+            list-style: square;
+            text-align: center;
+        }
+
+        p {
+            font-weight: 600;
+            font-size: 3em;
+        }
+
+        #list1-color {
+            background-color: rgba(165, 42, 42, 0.37);
+        }
+
+        .first-class {
+            background-color: rgba(160, 220, 255, 0.911);
+        }
+        
+        #amarelo{
+            background-color: lightgoldenrodyellow
+        }
+        #vermelho{
+            background-color: lightcoral;
+        }
+        #marrom{
+            background-color: burlywood;
+        }
