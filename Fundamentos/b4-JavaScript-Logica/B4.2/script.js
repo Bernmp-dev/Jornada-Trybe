@@ -131,14 +131,32 @@
 
 // EXERCICIO 4.9 [PRATICO]
 
-let numbers = [];
+// let numbers = [];
 
-for (let i = 1; i <= 25; i += 1){
-  numbers.push(i);
+// for (let i = 1; i <= 25; i += 1){
+//   numbers.push(i);
+// }
+
+// // console.log(numbers)
+
+// for (let index = 0; index < numbers.length; index += 1) {
+//   console.log(numbers[index] / 2);
+// };
+
+
+//2 -
+
+// Crie um algoritmo que conte quantos números do intervalo entre 2 e 150 são divisíveis por 3.
+// Caso a quantidade seja igual a 50, exiba uma mensagem secreta.
+
+let numerosDesejados = 0;
+
+for ( let i = 2; i <= 150; i += 1 ){
+  if (i % 3 === 0){
+    numerosDesejados += 1;
+  }
 }
 
-// console.log(numbers)
-
-for (let index = 0; index < numbers.length; index += 1) {
-  console.log(numbers[index] / 2);
-};
+if (numerosDesejados === 50){
+  console.log('Mensagem secreta')
+}
