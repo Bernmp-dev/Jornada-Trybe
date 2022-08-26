@@ -145,3 +145,6 @@ function triangulo (a,b,c){
 
 console.log(triangulo(70,80,30))
  */
+
+
+//Concluido.
