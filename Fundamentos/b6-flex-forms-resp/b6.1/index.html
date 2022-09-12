@@ -11,56 +11,58 @@
   <form action="" method="GET">
     <label for="emailId">Nome Completo</label>
     <br>
-    <input type="email" id="emailId" name="email-e-senha" min="10" max="40">
+    <input type="email" id="emailId" name="Email" min="10" max="40" >
     <br>
     <br>
     <label for="senhaId">Senha</label>
     <br>
-    <input type="password" name="email-e-senha" id="senhaId" min="10" max="50">
+    <input type="password" name="Senha" id="senhaId" min="10" max="50" >
     <br>
     <br>
     <br>
-    <label for="">Destino Preferido</label>
-    <select name="" id="">
-      <option value="cd">Cidade</option>
-      <option value="cp">Campo</option>
-      <option value="pr">Praia</option>
-      <option value="mt">Montanha</option>
-    </select>
+    <label for="Destino1 Destino2 Destino3 Destino4">Destino Preferido
+      <br>
+      <br>
+      <label for="Destino1"><input type="radio" name="Destino" id="Destino1" value="Cidade">Cidade</label>
+      <label for="Destino2"><input type="radio" name="Destino" id="Destino2" value="Campo">Campo</label>
+      <label for="Destino3"><input type="radio" name="Destino" id="Destino3" value="Praia">Praia</label>
+      <label for="Destino4"><input type="radio" name="Destino" id="Destino4" value="Montanha">Montanha</label>
+    </label>
     <br>
     <br>
     <label for="areaTexto">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>
     <br>
+    <br>
     <textarea name="texto" id="areaTexto" cols="50" rows="1" maxlength="500"></textarea>
     <br>
     <br>
+    <br>
     <label for="data">Qual a melhor data para realizar sua viagem?</label>
-    <input type="date" name="" id="data" min="2022-01-01" max="2023-12-01" required>
+    <input type="date" name="" id="data" min="2022-01-01" max="2023-12-01" >
     <br>
     <br>
-    <label for="oportunidadesSim">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+    <br>
+    <label for="oportunidades">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
       <br>
-      <input type="radio" name="oportunidades" id="oportunidadesSim">Sim
-    </label>
-    <label for="oportunidadesNao">
-      <input type="radio" name="oportunidades" id="oportunidadesNao">Nao
-    </label>
-    <br>
-    <br>
-    <label for="direito-imagem-sim">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
       <br>
-      <input type="radio" name="direito-imagem" id="direito-imagem-sim">Sim
-    </label>
-    <label for="direito-imagem-nao">
-      <input type="radio" name="direito-imagem" id="direito-imagem-nao">Nao
+      <input type="checkbox" name="oportunidades" id="oportunidades">Concordo
     </label>
     <br>
     <br>
-    <button type="submit"></button>
+    <label for="direito-imagem">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+      <br>
+      <br>
+      <input type="checkbox" name="direito-imagem" id="direito-imagem" required>Concordo
+    </label>
+    <br>
+    <br>
+    <button type="submit" id="subbutton">Enviar</button>
+    <button type="reset">Limpar</button>
     
     
 
-<script src="script.js"></script>
+
   </form>
+  <script src="script.js"></script>
 </body>
 </html>
