@@ -37,3 +37,38 @@
 
 // console.log(`Os números ${oddsAndEvens.sort((a, b) => a - b)} se encontram ordenados de forma crescente!`);
 
+// ----------------- Parte II - Exercício 1
+
+// Crie uma função que receba um número e retorne seu fatorial.
+// let result = 1;
+// const factorial = (num) => {
+//   for (let i = num; i >= 1; i -= 1) {
+//     result *= i;
+//   }
+//   return result
+// }
+
+// console.log(`Esse é o fatorial resultado da função: ${factorial(4)}`);
+
+// ----------------- Bônus: tente fazer o mesmo exercício de forma recursiva. Spoiler: É possível resolver com uma linha usando ternary operator.
+
+// const factorial = number => number > 1 ? number * factorial(number - 1) : 1;
+// console.log(factorial(5));
+
+// ----------------- Exercício 2
+// Crie uma função que receba uma frase como parâmetro e retorne a maior palavra contida nesta frase.
+
+
+
+const longestWord = (string) => {  
+  string = string.split(" ");
+
+  for (let value of string){
+    if (value.length > string[0].length){
+      string = value
+    }
+  }
+  return string;
+}
+
+console.log(longestWord('Antônio foi ao banheiro e não sabemos o que aconteceu')); // retorna 'aconteceu'
