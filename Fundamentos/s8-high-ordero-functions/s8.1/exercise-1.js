@@ -101,3 +101,71 @@
 // };
 
 // hof(RIGHT_ANSWERS, STUDENT_ANSWERS, compFunc);
+
+// ------------------- Exercícios - Bônus - Game Actions Simulator
+// Parte I
+// Nestes exercícios você irá implementar HOFs que simulam um turno de batalha em um jogo. Você irá criar funções que calculam dano, atualizam status, e ao final, retornam os resultados da rodada.
+
+// Para os próximos exercícios copie o código abaixo.
+
+const mage = {
+  healthPoints: 130,
+  intelligence: 45,
+  mana: 125,
+  damage: undefined,
+};
+
+const warrior = {
+  healthPoints: 200,
+  strength: 30,
+  weaponDmg: 2,
+  damage: undefined,
+};
+
+const dragon = {
+  healthPoints: 350,
+  strength: 50,
+  damage: undefined,
+};
+
+const battleMembers = { mage, warrior, dragon };
+
+const DragAttack = () => {
+  dragon.damage = Math.round(Math.random() * (dragon.strength - 15) + 15);
+  return dragon.damage
+}
+
+// console.log(DragAttack())
+
+const warriorAttack = () => {
+  let minDmg = warrior.strength;
+  let maxDmg = warrior.strength * warrior.weaponDmg;
+
+  warrior.damage = Math.round(Math.random() * (maxDmg - minDmg) + minDmg);
+  return warrior.damage
+}
+
+//  console.log(warriorAttack())
+
+const mageAttack = () => {
+  const mageMana = mage.mana;
+  const minDmg = mage.intelligence;
+  const maxDmg = mage.intelligence * 2;
+  const mageDmg = Math.round(Math.random() * (maxDmg - minDmg) + minDmg)
+
+  const mageTurn = {actualMana: 0, hitDmg: 'Não possui mana suficiente'}
+
+    if (mageMana > 15) {
+      // const mageDmg = minDmg < maxDmg ? maxDmg : minDmg;
+      mageTurn.actualMana = 15;
+      mageTurn.hitDmg = mageDmg;
+      return mageTurn
+    }
+  return mageTurn
+};
+
+console.log(mageAttack());
+
+const gameActions = {
+  // Crie as HOFs neste objeto.
+};
