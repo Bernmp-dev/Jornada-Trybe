@@ -1,0 +1,63 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+@media screen and (min-width: 0px) and (max-width:400px){
+body {
+  font: ;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  font-size: larger;
+}
+
+h1, h2 {
+  font-size: xx-large;
+  font-weight: 400;
+  text-align: center;
+}
+
+nav, nav ul {
+  background-color: azure;
+  display: flex;
+  justify-content: space-evenly;
+  flex-basis: 100%;
+}
+
+ul{
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+article, aside, p {
+  margin: 0px 10px 0px 10px;
+  text-align: justify;
+}
+
+li {
+  list-style: none;
+  text-align: left;
+  margin: 15px 0px 15px 0px;
+}
+
+footer {
+  margin: 15px;
+}
+}
+
+@media screen and (min-width: 400px) and (max-width:800px){
+  body {
+    background-color: lightcoral;
+}
+}
+
+@media screen and (min-width: 800px){
+  body {
+    background-color: lightgreen;
+}
+}
