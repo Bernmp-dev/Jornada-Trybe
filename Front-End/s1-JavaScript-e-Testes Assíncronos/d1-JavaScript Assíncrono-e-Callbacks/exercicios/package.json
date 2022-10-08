@@ -1,0 +1,18 @@
+{
+  "name": "exercicios",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exercicios.js",
+  "scripts": {
+    "test": "jest pokemon.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.1.2"
+  },
+  "dependencies": {
+    "@types/jest": "^29.1.2"
+  }
+}
