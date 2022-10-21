@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import About from "./about";
+// import React, { Component } from 'react';
+// import About from "./about";
 
-class App extends Component {
+// class App extends Component {
   // render() {
   //   return <About />;
   // }
-}
+// }
 
-export default App;
+// export default App;
