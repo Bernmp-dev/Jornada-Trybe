@@ -1,4 +1,4 @@
-import { questionInt } from 'readline-sync';
+import { questionFloat, questionInt } from 'readline-sync';
 
 function calcularIMC(peso, altura) {
   // Converter altura para metros
@@ -11,10 +11,10 @@ function calcularIMC(peso, altura) {
   return imc.toFixed(2);
 }
 
+const peso = questionFloat("Voce pesa quantos kilos? ");
 
-const imc = calcularIMC(
-  questionInt("Voce pesa quantos kilos? "),
-  questionInt("Qual a sua altura? ")
-);
+const altura = questionInt("Qual a sua altura? ");
+
+const imc = calcularIMC(peso, altura);
 
 console.log(`Seu IMC é: ${imc}`);
