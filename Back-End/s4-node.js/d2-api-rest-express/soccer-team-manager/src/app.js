@@ -1,6 +1,7 @@
 const express = require('express');
 const validateTeam = require('./middlewares/validateTeam');
 const existingId = require('./middlewares/existingId');
+const teams = require('./teams.json');
 
 const app = express();
 
@@ -10,31 +11,14 @@ const OK = 200;
 // const INTERNAL_SERVER_ERROR = 500;
 // const NOT_FOUND = 404;
 
-const teams = [
-  {
-    id: 1,
-    name: 'São Paulo Futebol Clube',
-    initials: 'SPF',
-  },
-  {
-    id: 2,
-    name: 'Clube Atlético Mineiro',
-    initials: 'CAM',
-  },
-];
-
 app.get('/', (_, res) => res.status(OK).json({ message: 'Olá Mundo!' }));
 
-app.get('/teams', (_, res) => res.status(200).json({ teams }));
+app.get('/teams', (_, res) => res.status(200).json(teams));
 
 app.get('/teams/:id', existingId, (req, res) => {
   try {
     const { id } = req.params;
     const findTeam = teams.find((team) => team.id === Number(id));
-
-    if (!findTeam) {
-      throw new Error('Team not found');
-    }
 
     res.status(200).json({ findTeam });
   } catch (err) {
@@ -79,5 +63,8 @@ app.delete('/teams/:id', existingId, (req, res) => {
     return res.status(400).json({ message: err.message });
   }
 });
+
+// se ninguém respondeu, vai cair neste middleware
+app.use((_req, res) => res.sendStatus(404));
 
 module.exports = app;

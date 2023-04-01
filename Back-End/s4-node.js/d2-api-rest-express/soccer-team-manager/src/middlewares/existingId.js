@@ -1,4 +1,5 @@
 const express = require('express');
+const teams = require('../teams.json');
 
 const app = express();
 
@@ -8,13 +9,9 @@ const existingId = (req, res, next) => {
   const id = +req.params.id;
   const findTeam = teams.some((team) => team.id === id);
 
-  if (!req.body) {
-    throw new Error('Missing request body');
-  }
-
-  return findTeam 
-  ? next() 
-  : res.status(404).json({ message: 'Team not found' });
+  return !findTeam 
+  ? res.status(404).json({ message: 'Team not found' })
+  : next();
 };
 
 module.exports = existingId;

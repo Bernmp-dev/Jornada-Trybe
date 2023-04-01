@@ -5,13 +5,12 @@ const app = express();
 app.use(express.json());
 
 const validateTeam = (req, res, next) => {
-  const reqProps = ['name', 'initials'];
-  const checkProps = reqProps
-    .every((property) => property in req.body);
+const { name, initials } = req.body;
 
-  return checkProps
-  ? next()
-  : res.status(404).json({ message: 'Team not found' });
+if (!name) return res.status(400).json({ message: 'O campo "name" é obrigatório' });
+if (!initials) return res.status(400).json({ message: 'O campo "initials" é obrigatório' });
+
+next();
 };
 
 module.exports = validateTeam;
